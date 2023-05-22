@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expanding sidebar</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #grid {
+            height: 100vh;
+        }
+
+        #left {
+            background: rgb(240, 240, 240);
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-size: 1.6rem;
+            color: darkblue;
+        }
+
+        #right {
+            background: rgb(173, 224, 255);
+            border: 3rem solid rgb(0 0 0 / 10%);
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            font-size: 1.6rem;
+            color: rgb(255, 255, 255);
+        }
+
+        /* the magic */
+        #grid {
+            transition: 300ms;
+            display: grid;
+            grid-template-columns: 48px auto;
+        }
+
+        #grid:has(#left:hover) {
+            grid-template-columns: 30% auto;
+        }
+
+        /* magic + CSS variable */
+        /* #grid {
+    transition: 300ms;
+    display: grid;
+    grid-template-columns: var(--left, 50px) auto;
+}
+
+#grid:has(#left:hover) {
+    --left: 30%;
+} */
+    </style>
+</head>
+
+<body>
+    <div id="grid">
+        <div id="left">Left Sidebar</div>
+        <div id="right">
+            <h1>Right Space to write</h1>
+            <br>
+            <p style="color: blue;"> <----- Hover on white area</p>
+        </div>
+    </div>
+</body>
+
+</html>
