@@ -1,0 +1,80 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+
+
+    /* individual center */
+    /* display: grid;
+    place-items: center; */
+
+    /* both center - near */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 6rem;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 2rem;
+    transition: all 0.3s linear;
+}
+
+.switch::after {
+    content: "";
+    position: absolute;
+    top: .1rem;
+    left: .1rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all 0.3s linear;
+}
+
+
+input[type="checkbox"]:checked+.switch:after {
+    /* in old version of chrome  */
+    transform: translateX(3rem);
+
+    /* in latest version (not working in Ubantu and old version of chrome*/
+    /* translate: 2rem 0; */
+}
+
+input[type="checkbox"]:checked+.switch {
+    background-color: #3b48ff;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.bg-dot.primary{
+    background-image:radial-gradient(#fab758 2px,transparent 2.5px);
+}
+.shape.rellax{
+    position: absolute;
+}
+.bg-soft-blue{
+    background-color:#edf2fc!important;
+}
+.rounded-circle{
+    border-radius:50%!important;
+}
+
+
+
+.circle{
+    padding:8%;
+    margin: 0rem;
+    background-color: #ffffff;
+    background-image: radial-gradient( #5F9EA0 1rem, transparent 1rem);
+    background-size: 5rem 5rem;
+}
