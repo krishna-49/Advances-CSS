@@ -1,0 +1,17 @@
+
+.body{
+    display: flex;
+    margin: 0;
+}
+
+
+.box{
+    background-color: skyblue;
+}
+.grid{
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 200px;
+}

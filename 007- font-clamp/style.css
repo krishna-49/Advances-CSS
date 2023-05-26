@@ -1,0 +1,6 @@
+body{
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    color: rgb(119, 65, 0);
+    font-size: clamp(0.5rem, 3.5vw, 3rem);
+}
