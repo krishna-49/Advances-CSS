@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.card{
+    position: relative;
+    width: 20em;
+    height: 25em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card .imgbox{
+    position: relative;
+    width: 100%;
+    height: 15em;
+    background-color: brown;
+    border-radius: 1em;
+    background: url('./home.jpeg');
+    background-size: cover;
+}
+.card .imgbox::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: -10px 10px 0 #fff;
+}
+.card .imgbox::after{
+    content: '';
+    position: absolute;
+    bottom: 64px;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: -10px 10px 0 #fff;
+}
+
+.card .content{
+    position: relative;
+    width: 100%;
+    height: 9em;
+    background-color: #2a3f6b;
+    border-radius: 1em;
+    border-top-left-radius: 0;
+    padding: 0 35px;
+}
+
+.card .content ul{
+    color: #fff;
+    line-height: 1.5em;
+}
+
+.card .content .price{
+    position: absolute;
+    left: 0;
+    top: -80px;
+    height: 5em;
+    width: 50%;
+    background: #2a3f6b;
+    border-top: 15px solid white;
+    border-right: 15px solid white;
+    border-top-right-radius: 25px;
+}
+
+.card .content .price::before{
+    content: "";
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: -10px -10px 0 #fff;
+}
+.card .content .price::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -1.5em;
+    width: 1.5em;
+    height: 1.5em;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: -10px 10px 0 #2a3f6b;
+}
+
+.card .content .price a{
+    position: relative;
+    background: white;
+    padding: 10px 20px;
+    margin: 15px 18px;
+    display: block; 
+    border-radius: 9px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000;
+}
