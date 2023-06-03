@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.mainDiv{
+    background: #786fa6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainDiv h1{
+    font-size: 7rem;
+    text-transform: uppercase;
+    color: white;
+    margin-top: -50px;
+}
+
+.mainDiv p{
+    font-size: 1.5rem;
+
+}
+
+.upper-svg{
+    background: #786fa6;
+}
