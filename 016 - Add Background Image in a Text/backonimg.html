@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Background Image in a Text</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Anton', sans-serif;
+        }
+
+        .main_header {
+            height: 100vh;
+            letter-spacing: 18px;
+            font-size: 8rem;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+
+        .main_header h1 {
+            background-image: url("https://wallpapers.com/images/hd/3840-x-1080-wallpaper-0b2g0mpc0onbzrr6.jpg");
+            background-size: 100% 100%;
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_header">
+        <h1>WEBTECH</h1>
+    </div>
+</body>
+
+</html>
