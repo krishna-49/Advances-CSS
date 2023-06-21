@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+
+}
+
+body {
+    background: #ecf7f5;
+}
+
+.row {
+    display: flex;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* cards */
+h1 {
+    font-size: clamp(80px, 10vw, 96px);
+    color: lightslategray;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.cards {
+    flex-wrap: wrap;
+    gap: 2em;
+    padding: 2em 0;
+}
+
+.card {
+    position: relative;
+    align-items: flex-end;
+    justify-content: center;
+    max-width: 150px;
+    min-height: 500px;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    background-image: url("./001.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px;
+    transition: max-width 0.5s ease-in-out;
+}
+
+
+.card:nth-child(2) {
+    background-image: url("./002.jpeg");
+}
+
+.card:nth-child(3) {
+    background-image: url("./003.jpeg");
+}
+
+.card:nth-child(4) {
+    background-image: url("./004.jpeg");
+}
+
+.card:hover {
+    max-width: 500px;
+}
+
+.card-body {
+    background: linear-gradient(180deg, rgba(45, 45, 45, 0)0%, #2d2d2d 100%);
+    padding: 4em;
+}
+
+.title {
+    background: linear-gradient(180deg, rgba(45, 45, 45, 0)0%, #2d2d2d 100%);
+    position: absolute;
+    inset: 0;
+}
+
+.card:hover .title {
+    all: unset;
+}
+
+h2{
+    font-size: clamp(38px, 5vw,48px);
+    color: #fffbfb;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin: 0;
+    transform: rotate(-90deg) translateX(-350px);
+}
+
+.card:hover h2{
+    padding-bottom: 0.5em;
+    transform: unset;
+}
+
+p{
+    position: absolute;
+    font-size: 18px;
+    color: #fff;
+    margin: 0;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.card:hover p{
+    position: relative;
+    opacity: 1;
+    max-height: 100%;
+    transition-delay: 0.3s;
+}
+/* End cards */
