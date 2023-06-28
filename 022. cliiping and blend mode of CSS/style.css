@@ -1,0 +1,19 @@
+/* Blend Mode */
+/* body{ 
+    background: url("./photo.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(124, 179, 252);
+    background-blend-mode: screen;
+} */
+
+
+/* clipping */
+body > #bg{
+        height: 100%;
+        width: 100%;
+        background-color: rgb(2, 211, 248);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 53% 100%, 0 40%);
+        position: absolute;
+        z-index: -1;
+}
